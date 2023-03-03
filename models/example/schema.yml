@@ -19,3 +19,26 @@ models:
         tests:
           - unique
           - not_null
+
+  - name: tb_10_compradores
+    description: "Retorna os top 10 compradores da base de dados"
+    columns:
+      - name: Vendas_Totais
+        description: "Vendas totais por comprador"
+        tests:
+          - nao_negativo
+          - not_null
+  - name: vm_sales
+    description: "View com informações de vendas"
+    columns:
+      - name: valor_pago
+        description: "Valor pago na compra"
+        tests:
+          - nao_negativo
+          - not_null
+    columns:
+      - name: comissao
+        description: "Comissao de venda"
+        tests:
+          - nao_negativo
+          - not_null
